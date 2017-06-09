@@ -1,0 +1,6 @@
+- name: Install libselinux
+  yum: name=libselinux-python state=present
+- name: Make selinux permissive
+  selinux:
+    policy: targeted
+    state: permissive
